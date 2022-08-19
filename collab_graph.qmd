@@ -10,6 +10,7 @@ execute:
 #| message: false
 library(lterdatasampler)
 library(tidyverse)
+library(kableExtra)
 
 
 ```
@@ -27,4 +28,10 @@ size_summary <- pie_crab |>
   summarize(mean_width = round(mean(size, na.rm = TRUE),2),
             sd_width = round(sd(size, na.rm = TRUE), 2),
             count = n())
+```
+
+```{r}
+size_summary |> 
+  kable(col.names = c("Site", "Mean Width (mm)", "Width SD (mm)", "Count")) |> 
+  add_header_above(c(" " = 1, "These crabs are thiccc" = 2, " " = 1), italic = TRUE, align = "C", color = "blue")
 ```
