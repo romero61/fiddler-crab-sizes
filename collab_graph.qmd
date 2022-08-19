@@ -2,16 +2,21 @@
 title: "crabs"
 format: html
 editor: visual
+execute: 
+  echo: false
 ---
 
 ```{r}
+#| message: false
 library(lterdatasampler)
 library(tidyverse)
 
-View(pie_crab)
+
 ```
 
 ```{r}
+#| fig-cap: "this is my caption"
+
 crabcara <- ggplot(pie_crab, aes(x = latitude, y = size)) +
   geom_point()
 
