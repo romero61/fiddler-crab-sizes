@@ -6,6 +6,14 @@ editor: visual
 
 ```{r}
 library(lterdatasampler)
+library(tidyverse)
 
 View(pie_crab)
+```
+
+```{r}
+crabcara <- ggplot(pie_crab, aes(x = latitude, y = size)) +
+  geom_point()
+
+crabcara
 ```
