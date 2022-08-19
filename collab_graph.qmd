@@ -21,4 +21,10 @@ crabcara <- ggplot(pie_crab, aes(x = latitude, y = size)) +
   geom_point()
 
 crabcara
+
+size_summary <- pie_crab |> 
+  group_by(site) |> 
+  summarize(mean_width = round(mean(size, na.rm = TRUE),2),
+            sd_width = round(sd(size, na.rm = TRUE), 2),
+            count = n())
 ```
