@@ -1,0 +1,11 @@
+---
+title: "crabs"
+format: html
+editor: visual
+---
+
+```{r}
+library(lterdatasampler)
+
+View(pie_crab)
+```
